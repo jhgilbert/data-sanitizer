@@ -35,7 +35,10 @@ const sanitizeField = (data, fieldName) => {
   return removedValues
 }
 
-const sanitizeFields = (data, fieldNames) => {
+/**
+ *  Given a list of field names, sanitize data.
+ */
+const sanitizeFields = ({ data, fieldNames }) => {
   let removedValues = {}
 
   fieldNames.forEach(fieldName => {
@@ -51,9 +54,6 @@ const sanitizeFields = (data, fieldNames) => {
   }
 }
 
-let data = [
-  { id: 1, name: "Jen Gilbert" },
-  { id: 2, name: "Barack Obama" }
-]
-
-console.log(sanitizeFields(data, ['id']))
+module.exports = {
+  sanitizeFields
+}
