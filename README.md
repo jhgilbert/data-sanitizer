@@ -2,9 +2,30 @@
 
 A simple data sanitizer that preserves the removed values for reference.
 
-## Usage examples
+## Usage
 
-TODO
+```
+const { sanitizeFields } = require('data-sanitizer')
+
+let data = [
+  { id: 1, name: "Jen Gilbert" },
+  { id: 2, name: "Derek Reeve" }
+]
+
+const sanitationResult = sanitizeFields({ data, fieldNames: ['id'] })
+
+console.log(sanitationResult)
+
+/*
+{
+  data: [
+    { id: '[SANITIZED]', name: 'Jen Gilbert' },
+    { id: '[SANITIZED]', name: 'Derek Reeve' }
+  ],
+  removedValues: { id: [ 1, 2 ] }
+}
+*/
+```
 
 ## Why does this exist?
 
