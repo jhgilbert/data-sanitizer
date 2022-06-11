@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`sanitizes multiple fields 1`] = `
+Object {
+  "data": Array [
+    Object {
+      "id": "[SANITIZED]",
+      "name": "Jen Gilbert",
+      "pets": "[SANITIZED]",
+    },
+    Object {
+      "id": "[SANITIZED]",
+      "name": "Derek Reeve",
+      "pets": "[SANITIZED]",
+    },
+  ],
+  "removedValues": Object {
+    "id": Array [
+      1,
+      2,
+    ],
+    "pets": Array [
+      Array [
+        Object {
+          "id": 3,
+          "name": "Frank",
+        },
+      ],
+      Array [
+        Object {
+          "id": 4,
+          "name": "Evey",
+        },
+        Object {
+          "id": 5,
+          "name": "Alfie",
+        },
+      ],
+    ],
+  },
+}
+`;
