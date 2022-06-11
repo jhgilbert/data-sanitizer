@@ -8,8 +8,8 @@ A simple data sanitizer that preserves the removed values for reference.
 const { sanitizeFields } = require('data-sanitizer')
 
 let data = [
-  { id: 1, name: "Jen Gilbert" },
-  { id: 2, name: "Derek Reeve" }
+  { id: 1, name: 'Jen' },
+  { id: 2, name: 'Derek' }
 ]
 
 const sanitationResult = sanitizeFields({ data, fieldNames: ['id'] })
@@ -22,8 +22,8 @@ The above code will print
 ```
 {
   data: [
-    { id: '[SANITIZED]', name: 'Jen Gilbert' },
-    { id: '[SANITIZED]', name: 'Derek Reeve' }
+    { id: '[SANITIZED]', name: 'Jen' },
+    { id: '[SANITIZED]', name: 'Derek' }
   ],
   removedValues: { id: [ 1, 2 ] }
 }
