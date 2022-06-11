@@ -5,7 +5,7 @@ Object {
   "data": Array [
     Object {
       "id": "[SANITIZED]",
-      "name": "Jen Gilbert",
+      "name": "Jen",
       "pets": Array [
         Object {
           "id": "[SANITIZED]",
@@ -15,7 +15,7 @@ Object {
     },
     Object {
       "id": "[SANITIZED]",
-      "name": "Derek Reeve",
+      "name": "Derek",
       "pets": Array [
         Object {
           "id": "[SANITIZED]",

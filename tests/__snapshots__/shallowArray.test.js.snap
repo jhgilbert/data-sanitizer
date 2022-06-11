@@ -5,11 +5,11 @@ Object {
   "data": Array [
     Object {
       "id": "[SANITIZED]",
-      "name": "Jen Gilbert",
+      "name": "Jen",
     },
     Object {
       "id": "[SANITIZED]",
-      "name": "Derek Reeve",
+      "name": "Derek",
     },
   ],
   "removedValues": Object {

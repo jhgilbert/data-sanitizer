@@ -4,7 +4,7 @@ exports[`sanitizes a shallow object 1`] = `
 Object {
   "data": Object {
     "id": "[SANITIZED]",
-    "name": "Jen Gilbert",
+    "name": "Jen",
   },
   "removedValues": Object {
     "id": Array [
