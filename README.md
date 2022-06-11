@@ -15,8 +15,11 @@ let data = [
 const sanitationResult = sanitizeFields({ data, fieldNames: ['id'] })
 
 console.log(sanitationResult)
+```
 
-/*
+The above code will print
+
+```
 {
   data: [
     { id: '[SANITIZED]', name: 'Jen Gilbert' },
@@ -24,8 +27,15 @@ console.log(sanitationResult)
   ],
   removedValues: { id: [ 1, 2 ] }
 }
-*/
 ```
+
+## Sanitizing multiple fields
+
+You can sanitize multiple fields, but be aware that the sanitization operations will run in order. Depending on the order of the field names you pass in, you may wind up with sanitized values in your `removedValues` result.
+
+## Sanitizing nested data
+
+The sanitization is recursive, so you can pass in arrays of objects, etc. as your data.
 
 ## Why does this exist?
 
