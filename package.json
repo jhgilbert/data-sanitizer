@@ -1,0 +1,14 @@
+{
+  "name": "data-sanitizer",
+  "version": "1.0.0",
+  "description": "A simple data sanitizer that preserves the removed values for reference.",
+  "license": "MIT",
+  "repository": "jhgilbert/data-sanitizer",
+  "main": "index.js",
+  "keywords": [
+    "sanitation",
+    "sanitizer",
+    "sanitize",
+    "data"
+  ]
+}
