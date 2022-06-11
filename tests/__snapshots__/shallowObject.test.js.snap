@@ -13,3 +13,17 @@ Object {
   },
 }
 `;
+
+exports[`sanitizes a shallow object 1`] = `
+Object {
+  "data": Object {
+    "id": "[SANITIZED]",
+    "name": "Jen Gilbert",
+  },
+  "removedValues": Object {
+    "id": Array [
+      1,
+    ],
+  },
+}
+`;

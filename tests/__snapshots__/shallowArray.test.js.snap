@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`sanitizes a shallow array 1`] = `
+Object {
+  "data": Array [
+    Object {
+      "id": "[SANITIZED]",
+      "name": "Jen Gilbert",
+    },
+    Object {
+      "id": "[SANITIZED]",
+      "name": "Derek Reeve",
+    },
+  ],
+  "removedValues": Object {
+    "id": Array [
+      1,
+      2,
+    ],
+  },
+}
+`;
