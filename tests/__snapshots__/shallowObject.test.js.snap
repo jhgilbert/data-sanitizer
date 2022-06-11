@@ -1,19 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`sanitizes a plain object 1`] = `
-Object {
-  "data": Object {
-    "id": "[SANITIZED]",
-    "name": "Jen Gilbert",
-  },
-  "removedValues": Object {
-    "id": Array [
-      1,
-    ],
-  },
-}
-`;
-
 exports[`sanitizes a shallow object 1`] = `
 Object {
   "data": Object {

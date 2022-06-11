@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`sanitizes nested data 1`] = `
+Object {
+  "data": Array [
+    Object {
+      "id": "[SANITIZED]",
+      "name": "Jen Gilbert",
+      "pets": Array [
+        Object {
+          "id": "[SANITIZED]",
+          "name": "Frank",
+        },
+      ],
+    },
+    Object {
+      "id": "[SANITIZED]",
+      "name": "Derek Reeve",
+      "pets": Array [
+        Object {
+          "id": "[SANITIZED]",
+          "name": "Evey",
+        },
+        Object {
+          "id": "[SANITIZED]",
+          "name": "Alfie",
+        },
+      ],
+    },
+  ],
+  "removedValues": Object {
+    "id": Array [
+      1,
+      3,
+      2,
+      4,
+      5,
+    ],
+  },
+}
+`;
