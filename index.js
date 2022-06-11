@@ -9,7 +9,7 @@ const _ = require('lodash')
 const sanitizeField = (data, fieldName) => {
   let removedValues = []
 
-  // handle objects
+  // handle objects (kv pairs)
   if (_.isPlainObject(data)) {
     Object.keys(data).forEach(key => {
       const value = data[key]
@@ -23,10 +23,8 @@ const sanitizeField = (data, fieldName) => {
         removedValues = removedValues.concat(sanitizeField(value, fieldName))
       }
     })
-  }
-
   // handle arrays
-  if (_.isArray(data)) {
+  } else if (_.isArray(data)) {
     data.forEach(nestedData => {
       removedValues = removedValues.concat(sanitizeField(nestedData, fieldName))
     })
