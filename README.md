@@ -12,9 +12,9 @@ let data = [
   { id: 2, name: 'Derek' }
 ]
 
-const sanitationResult = sanitizeFields({ data, fieldNames: ['id'] })
+const sanitizationResult = sanitizeFields({ data, fieldNames: ['id'] })
 
-console.log(sanitationResult)
+console.log(sanitizationResult)
 ```
 
 The above code will print
@@ -29,13 +29,42 @@ The above code will print
 }
 ```
 
-## Sanitizing multiple fields
-
-You can sanitize multiple fields, but be aware that the sanitization operations will run in order. Depending on the order of the field names you pass in, you may wind up with sanitized values in your `removedValues` result.
-
 ## Sanitizing nested data
 
-The sanitization is recursive, so you can pass in arrays of objects, etc. as your data.
+The sanitization is recursive, so it will work on nested data structures.
+
+## Sanitizing multiple fields
+
+You can sanitize multiple fields: 
+
+```
+let data = [
+  { 
+    id: 1, 
+    name: 'Jen', 
+    pets: [
+      { id: 3, name: 'Frank' }
+    ]
+  },
+  { 
+    id: 2, 
+    name: 'Derek', 
+    pets: [
+      { id: 4, name: 'Evey' },
+      { id: 5, name: 'Alfie' }
+    ]
+  }
+]
+
+const sanitizationResult = sanitizeFields({ data, fieldNames: ['pets', 'id'] })
+```
+
+Be aware that the sanitization operations will run **in field-name order**. 
+
+Depending on the order of the field names you pass in, you may wind up with sanitized values in your `removedValues` result. 
+
+- In the above example, the entire value of the fieldName `pets` would be preserved in `sanitizationResult.removedValues`, including the original numerical IDs. This is because `pets` was listed first in `fieldNames`, so no `id` fields had been sanitized yet at the time of preservation.
+- If `id` had been listed first instead, `sanitizationResult.removedValues.pets` would have sanitized IDs in it, rather than numerical ones, as the `id` sanitization operation would run first, impacting the entire data structure.
 
 ## Why does this exist?
 
