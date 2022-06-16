@@ -19,6 +19,6 @@ test('sanitizes nested data', () => {
     }
   ]
 
-  const sanitationResult = sanitizeFields({ data, fieldNames: ['id'] })
-  expect(sanitationResult).toMatchSnapshot()
+  const sanitizationResult = sanitizeFields({ data, fieldNames: ['id'] })
+  expect(sanitizationResult).toMatchSnapshot()
 })

@@ -19,6 +19,6 @@ test('sanitizes multiple fields', () => {
     }
   ]
 
-  const sanitationResult = sanitizeFields({ data, fieldNames: ['pets', 'id'] })
-  expect(sanitationResult).toMatchSnapshot()
+  const sanitizationResult = sanitizeFields({ data, fieldNames: ['pets', 'id'] })
+  expect(sanitizationResult).toMatchSnapshot()
 })
