@@ -12,9 +12,9 @@ let data = [
   { id: 2, name: 'Derek' }
 ]
 
-const sanitizationResult = sanitizeFields({ data, fieldNames: ['id'] })
+const result = sanitizeFields({ data, fieldNames: ['id'] })
 
-console.log(sanitizationResult)
+console.log(result)
 ```
 
 The above code will print
@@ -56,7 +56,7 @@ let data = [
   }
 ]
 
-const sanitizationResult = sanitizeFields({ data, fieldNames: ['pets', 'id'] })
+const result = sanitizeFields({ data, fieldNames: ['pets', 'id'] })
 ```
 
 Be aware that the sanitization operations will run **in field-name order**. 
